@@ -59,7 +59,8 @@ def detect_trackers(apk):
         for cat in tracker.categories:
             score += tracker_types[cat]
         print(tracker.name, tracker.categories)
-    print("Trackers score", round(score / trackers_num, 2))
+    if trackers_num != 0:
+        print("Trackers score", round(score / trackers_num, 2))
 
 
 apk_path = "app.apk"
